@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-struct
+  labels:
+    app: demo-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pods-label
+  template:
+    metadata:
+      name: pod-name
+      labels:
+        app: pods-label
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+          - containerPort: 80
