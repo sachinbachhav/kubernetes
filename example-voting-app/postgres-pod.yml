@@ -16,6 +16,6 @@ spec:
         - name:  POSTGRES_PASSWORD
           value: "postgres"
         - name: POSTGRES_HOST_AUTH_METHOD
-            value: trusts
+          value: trusts
       ports:
         - containerPort: 5432
